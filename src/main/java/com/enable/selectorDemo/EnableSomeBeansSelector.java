@@ -11,4 +11,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @Import(SomeBeanConfigurationSelector.class)
 public @interface EnableSomeBeansSelector {
+    String criteria() default "default";
 }
