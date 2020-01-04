@@ -14,19 +14,19 @@ public class SomeBeanConfigurationSelector implements ImportSelector {
                                 (EnableSomeBeansSelector.class.getName(), false));
         String criteria = attributes.getString("criteria");
         if (criteria.equals("default")) {
-            return new String[]{"enableannot.selector.SomeBeanConfigurationDefault"};
+            return new String[]{"com.enable.selectorDemo.SomeBeanConfigurationDefault"};
         }else {
-            return new String[]{"enableannot.selector.SomeBeanConfigurationType1"};
+            return new String[]{"com.enable.selectorDemo.SomeBeanConfigurationTypeA"};
         }
     }
 }
 
 @Configuration
-class SomeBeanConfigurationType1 {
+class SomeBeanConfigurationTypeA {
 
     @Bean
     public String aBean() {
-        return "Type1";
+        return "TypeA";
     }
 
 }
